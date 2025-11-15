@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+:root {
+    --primary-color: #b13a1c;
+    --highlight: #ff0000;
+    --background-color: #040109;
+    --light-color: #EBD6FB;
+}
+
+body {
+    background-color: #000000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+/* ESTRELLAS */
+
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background-color: var(--light-color);
+  border-radius: 50%;
+  opacity: 0;
+  filter: drop-shadow(0 0 6px white);
+  animation: twinkle 2s infinite ease-in-out;
+}
+
+.star:nth-child(1) { top: 10%; left: 20%; animation-delay: 0.2s; }
+.star:nth-child(2) { top: 40%; left: 70%; animation-delay: 0.5s; }
+.star:nth-child(3) { top: 80%; left: 50%; animation-delay: 0.7s; }
+.star:nth-child(4) { top: 30%; left: 90%; animation-delay: 1s; }
+.star:nth-child(5) { top: 60%; left: 10%; animation-delay: 1.2s; }
+.star:nth-child(6) { top: 75%; left: 80%; animation-delay: 1.5s; }
+.star:nth-child(7) { top: 20%; left: 40%; animation-delay: 1.8s; }
+.star:nth-child(8) { top: 50%; left: 30%; animation-delay: 2s; }
+.star:nth-child(9) { top: 90%; left: 60%; animation-delay: 2.3s; }
+.star:nth-child(10) { top: 15%; left: 75%; animation-delay: 2.6s; }
+.star:nth-child(11) { top: 5%; left: 25%; animation-delay: 0.2s; }
+.star:nth-child(12) { top: 25%; left: 75%; animation-delay: 0.5s; }
+.star:nth-child(13) { top: 35%; left: 55%; animation-delay: 0.7s; }
+.star:nth-child(14) { top: 45%; left: 95%; animation-delay: 1s; }
+.star:nth-child(15) { top: 55%; left: 15%; animation-delay: 1.2s; }
+.star:nth-child(16) { top: 65%; left: 85%; animation-delay: 1.5s; }
+.star:nth-child(17) { top: 70%; left: 45%; animation-delay: 1.8s; }
+.star:nth-child(18) { top: 85%; left: 35%; animation-delay: 2s; }
+.star:nth-child(19) { top: 95%; left: 65%; animation-delay: 2.3s; }
+.star:nth-child(20) { top: 95%; left: 70%; animation-delay: 2.6s; }
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px white);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.8);
+    filter: drop-shadow(0 0 20px white);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px white);
+  }
+}
