@@ -1,26 +1,124 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    scroll-behavior: smooth;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  list-style: none;
 }
 
 :root {
-    --primary-color: #b13a1c;
-    --highlight: #ff0000;
-    --background-color: #040109;
-    --light-color: #EBD6FB;
+  --primary-color: #b13a1c;
+  --highlight: #ff0000;
+  --background-color: #040109;
+  --light-color: #EBD6FB;
 }
 
 body {
-    background-color: #000000;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+
+/* BARRA DE CARGA */
+
+.ovni-cont {
+  position: relative;
+  width: 650px;
+}
+
+.ovni-img {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 120px;
+  transition: left 1.5s ease-out;
+}
+
+.ufo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.barra-cont {
+  width: 650px;
+  text-align: center;
+}
+
+.barra-load {
+  width: 100%;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.barra-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #fff, #fff);
+  border-radius: 8px;
+  transition: width 0.5s ease;
+  box-shadow: 0 0 10px #fff;
+}
+
+.barra-text {
+  font-size: 18px;
+  color: white;
+  text-shadow: 0 0 10px #fff;
+}
+
+
+/* ERROR 404 */
+
+.error-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.error-cont {
+  text-align: center;
+  animation: fadeIn 1s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.error-cont h1 {
+  font-size: 120px;
+  color: #ffffff;
+  text-shadow: 0 0 20px #ffffff;
+  margin-bottom: 20px;
+}
+
+.error-cont h2 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 
@@ -34,7 +132,7 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: -1;
+  z-index: 5;
 }
 
 .star {
