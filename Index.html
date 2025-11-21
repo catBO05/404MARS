@@ -4,32 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARS</title>
+    <!-- FAVICON -->
+    <link href="MEDIA/IMG/Favicon.svg" rel="icon" type="image/png">
+    <!-- CSS -->
     <link rel="stylesheet" href="CSS/styles.css">
-    
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- <div class="ovni-cont">
-        <img src="MEDIA/VIDEO/2432cf5ff737ad7d1794a29d042eb02e_w200.gif" alt="OVNI" class="ovni-img" id="ovni">
-        <div class="barra-cont">
-            <div class="barra-load">
-                <div class="barra-fill" id="barraFill"></div>
-            </div>
-            <div class="barra-text" id="barraText">0%</div>
-        </div>
-    </div> -->
-
-    <section>
-        <!-- OVNI -->
-        <div id="animationArea" class="animation-area">
-            <img src="MEDIA/IMG/ovni.png" alt="Imagen animada" id="animationImage" class="animated-image">
-        </div>
     
-        <!-- BARRA + ERROR -->
+    <section>
+        <div id="logo1">
+            <img src="MEDIA/IMG/Logo.svg">
+        </div>
+        
+        
+        <!-- BARRA DE CARGA -->
         <div class="container">
             <div class="barra-cont">
                 <div class="loading-bar-container">
@@ -38,49 +31,84 @@
                     </div>
                 </div>
                 <div id="loadingText" class="loading-text">LOADING...</div>
+                <div class="stars-loading">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </div>
             </div>
         </div>
-        <!-- ERROR 404 -->
-        <!-- <div id="error404" class="error-404 hidden">
-            <div class="error-code glitch-effect" data-text="404">404</div>
-            <div class="error-title">The planet Mars has vanished from the solar system</div>
-            <div class="error-description">
-                We're sorry, but you're going to have to live on Mars for a while
-            </div>
-        </div> -->
-    
-        <div id="404-error" class="error-screen hidden">
-            <div class="error-cont">
-                <h1>ERROR 404</h1>
-                <h2>The planet Mars has vanished from the solar system</h2>
-            </div>
+        <div class="video3D">
+            <video src="MEDIA/VIDEO/Animacion_ovni.mp4" autoplay loop muted playsinline></video>
         </div>
     </section>
+    
+    <!-- ERROR 404 -->
+    <div id="404-error" class="error-screen hidden">
+        <div id="head">
+            <div id="logo2">
+                <img src="MEDIA/IMG/Logo.svg" alt="Logo">
+            </div>
+            <div class="menu-icon">
+                <img src="MEDIA/IMG/Menu_hambuguesa.svg" alt="Menú">
+            </div>
+        </div>
 
+        <div class="stars-error">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        
+        <img class="img-error" src="MEDIA/IMG/mensaje_ERROR_img.png">
 
-    <!-- ESTRELLAS DE FONDO -->
-    <div class="stars">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
+        <div class="text-error">
+            <h1 class="title-error">ERROR 404</h1>
+            <p class="p-error">Parece que te perdiste en el espacio</p>
+        </div>
+
+        <a href="#" class="boton"> Back to Home</a>
     </div>
+
+
 
     <script src="JS/script.js"></script>
 </body>
