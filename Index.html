@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MARS</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="ovni-cont">
+    <!-- <div class="ovni-cont">
         <img src="MEDIA/VIDEO/2432cf5ff737ad7d1794a29d042eb02e_w200.gif" alt="OVNI" class="ovni-img" id="ovni">
         <div class="barra-cont">
             <div class="barra-load">
@@ -16,15 +21,44 @@
             </div>
             <div class="barra-text" id="barraText">0%</div>
         </div>
-    </div>
+    </div> -->
 
-    <div id="404-error" class="error-screen hidden">
-        <div class="error-cont">
-            <h1>ERROR 404</h1>
-            <h2>¡Página no encontrada!</h2>
+    <section>
+        <!-- OVNI -->
+        <div id="animationArea" class="animation-area">
+            <img src="MEDIA/IMG/ovni.png" alt="Imagen animada" id="animationImage" class="animated-image">
         </div>
-    </div>
+    
+        <!-- BARRA + ERROR -->
+        <div class="container">
+            <div class="barra-cont">
+                <div class="loading-bar-container">
+                    <div id="loadingBar" class="loading-bar">
+                        <div id="percentage" class="percentage"></div>
+                    </div>
+                </div>
+                <div id="loadingText" class="loading-text">LOADING...</div>
+            </div>
+        </div>
+        <!-- ERROR 404 -->
+        <!-- <div id="error404" class="error-404 hidden">
+            <div class="error-code glitch-effect" data-text="404">404</div>
+            <div class="error-title">The planet Mars has vanished from the solar system</div>
+            <div class="error-description">
+                We're sorry, but you're going to have to live on Mars for a while
+            </div>
+        </div> -->
+    
+        <div id="404-error" class="error-screen hidden">
+            <div class="error-cont">
+                <h1>ERROR 404</h1>
+                <h2>The planet Mars has vanished from the solar system</h2>
+            </div>
+        </div>
+    </section>
 
+
+    <!-- ESTRELLAS DE FONDO -->
     <div class="stars">
         <div class="star"></div>
         <div class="star"></div>
