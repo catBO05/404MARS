@@ -12,9 +12,10 @@
 
 :root {
   --primary-color: #CC2900;
+  --white-color: #ffffff;
   --highlight: #ff0000;
-  --background-color: #000000;
   --light-color: #EBD6FB;
+  --background-color: #000000;
 }
 
 body {
@@ -24,6 +25,25 @@ body {
   justify-content: center;
   align-items: center;
   margin: 0;
+}
+
+h1 {
+  font-size: 4.5rem;
+  color: var(--highlight);
+  text-shadow: 0 0 15px var(--highlight);
+}
+
+p {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  text-shadow: 0 0 15px var(--white-color);
+}
+
+h1,
+p {
+  animation: flicker 0.15s infinite, glitch 2s infinite;
+  position: relative;
+  font-family: "Pixelify Sans", sans-serif;
 }
 
 section {
@@ -40,8 +60,6 @@ section {
 
 
 /* BARRA DE CARGA */
-
-
 .container {
   width: 100%;
   max-width: 500px;
@@ -65,7 +83,6 @@ section {
 
 .barra-cont {
   margin: 30px 0;
-  z-index: 5;
 }
 
 .loading-bar-container {
@@ -188,31 +205,14 @@ section {
 .text-error {
   position: absolute;
   top: 48%;
-  left: 50%;
-  transform: translate(-66%, -30%);
-  z-index: 1000;
+  left: 51%;
+  transform: translate(-107%, -15%);
+  z-index: 5;
   text-align: center;
-  width: 100%;
+  width: 30%;
   color: white;
 }
 
-.title-error {
-  font-size: 4.5rem;
-  color: white;
-  text-shadow: 0 0 15px rgb(255, 255, 255);
-}
-
-.p-error {
-  font-size: 1.5rem;
-  color: white;
-  text-shadow: 0 0 15px rgb(255, 255, 255);
-}
-
-.title-error,
-.p-error {
-  animation: flicker 0.15s infinite, glitch 2s infinite;
-  position: relative;
-}
 
 @keyframes flicker {
   0% { opacity: 1; }
@@ -243,22 +243,43 @@ section {
 }
 
 .boton {
-  text-align: justify;
-  position: absolute;
-  top: 20%;
-  padding-top: 70px;
   left: 43%;
-  color: white;
-  font-size: 1.25rem;
-  text-align: center;
-  z-index: 9999;
-  text-decoration: underline;
+  width: 10%;
+  top: 15%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  /* display: inline-block; */
+  /* position: absolute; */
+}
+
+.boton a {
+  color: var(--background-color);
+  /* text-decoration: underline; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  transition: all 0.5s ease;
+}
+
+.boton a:hover {
+  transform: scale(1.1) perspective(200px);
+  color: #ffcd0c;
+}
+
+.boton a span {
+  font-family: "Gloria Hallelujah", cursive;
+  font-weight: 400;
+  font-size: 1.3rem;
+  transform: rotate(5deg);
+  margin-top: -6px;
 }
 
 
 /* ESTRELLAS */
-
-
 .stars-loading {
   position: fixed;
   top: 0;
@@ -330,5 +351,112 @@ section {
     opacity: 0.2;
     transform: scale(1);
     filter: drop-shadow(0 0 10px white);
+  }
+}
+
+
+
+/* RESPONSIVE */
+/* TABLET */
+@media screen and (max-width: 1200px) {
+  h1 {
+    font-size: 4rem;
+  }
+  
+  p,
+  .boton a span {
+    font-size: 1.2rem;
+  }
+  
+  #logo1 {
+    width: 15em;
+  }
+
+  .container {
+    max-width: 400px;
+  }
+
+  .barra-cont {
+    margin: 40px 0;
+  }
+  
+  .video3D {
+    top: 32%;
+    left: 10%;
+    transform: translate(-10%, -40%);
+  }
+  
+  .video3D video {
+    width: 150%;
+    height: 150%;
+  }
+
+  .boton {
+    left: 42%;
+    top: 14%;
+  }
+
+  .text-error {
+    top: 54%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+    width: 34%;
+  }
+}
+
+/* MÓVIL */
+@media screen and (max-width: 780px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+  }
+
+  h1, p {
+    animation: flicker 0.2s infinite, glitch 3s infinite;
+  }
+  
+  .container {
+    margin-top: 58%;
+  }
+  
+  .loading-bar-container {
+    height: 30px;
+  }
+  
+  .loading-text {
+    font-size: 0.9rem;
+  }
+  
+  .percentage {
+    font-size: 0.8rem;
+  }
+
+  .video3D {
+    top: 65%;
+    left: -10%;
+    transform: translate(-8%, -85%);
+  }
+  
+  .video3D video {
+    width: 120%;
+    height: 120%;
+  }
+
+  .menu-icon {
+    width: 2.5rem;
+  }
+  
+  .text-error {
+    left: 27%;
+    width: 40%;
+  }
+  
+  .boton {
+    left: 37%;
+    width: 18%;
+    top: 16%;
   }
 }
